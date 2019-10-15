@@ -1,0 +1,39 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"miniprogramRoot": "miniprogram/",
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"projectname": "wx-small-app-ds",
+	"scripts": {
+		"beforeCompile": "npm run tsc",
+		"beforePreview": "npm run tsc",
+		"beforeUpload": "npm run tsc"
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": true
+	},
+	"appid": "wxe873b142f719de93",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
+}
