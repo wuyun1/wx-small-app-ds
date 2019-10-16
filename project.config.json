@@ -5,7 +5,7 @@
 	},
 	"miniprogramRoot": "miniprogram/",
 	"compileType": "miniprogram",
-	"libVersion": "2.8.3",
+	"libVersion": "2.7.7",
 	"projectname": "wx-small-app-ds",
 	"scripts": {
 		"beforeCompile": "npm run tsc",
@@ -13,7 +13,7 @@
 		"beforeUpload": "npm run tsc"
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
@@ -30,7 +30,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"bundle": true
+		"bundle": false
 	},
 	"appid": "wxe873b142f719de93",
 	"simulatorType": "wechat",
