@@ -1,7 +1,7 @@
 
 const config = {
     appkey: 'gUgOl5iEyXSrYStD',
-    apiBaseUrl: 'http://se.7yue.pro/v1'
+    apiBaseUrl: 'https://se-7yue.jd1.jajabjbj.top/v1'
 };
 
 export {

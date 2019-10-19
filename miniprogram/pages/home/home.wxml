@@ -13,5 +13,6 @@
             </swiper-item>
         </block>
     </swiper>
-    <s-category-grid grid="{{grid}}"></s-category-grid>
+    <s-category-grid grid="{{gridC}}"></s-category-grid>
+    <image class="activity" src="{{activityD.entrance_img}}" />
 </view>
