@@ -9,7 +9,7 @@ class Theme {
         const res: any = await Http.request({
             url: `/theme/by/names`,
             data: {
-                names: this.getHomeLocationA,
+              names: this.locationA,
             },
         });
         return res;
@@ -19,7 +19,7 @@ class Theme {
         const res: any = await Http.request({
             url: `/theme/by/names`,
             data: {
-                names: this.getHomeLocationE,
+              names: this.locationE,
             },
         });
         return res;
