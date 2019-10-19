@@ -1,19 +1,18 @@
 import { config } from "../config/config";
+import { promisic } from "./util";
 
 class Http {
-    static request(option: wx.RequestOption) {
-        return (new Promise( (resolve : any, reject: any) => {
-            wx.request({
-                method: 'GET',
-                ...option,
-                url: `${config.apiBaseUrl}${option.url}`,
-                header: {
-                    appkey: config.appkey,
-                },
-                success: resolve,
-                fail: reject,
-            })
-        }));
+    static async request(option: wx.RequestOption) {
+        const response = await promisic(wx.request)({
+            method: 'GET',
+            ...option,
+            url: `${config.apiBaseUrl}${option.url}`,
+            header: {
+                appkey: config.appkey,
+            },
+        });
+
+        return (response as any).data;
     }
 }
 

@@ -13,3 +13,23 @@ const formatNumber = (n: number) => {
   const str = n.toString()
   return str[1] ? str : '0' + str
 }
+
+const promisic = function<T> (func: Function) {
+  return function (params = {}) {
+    return new Promise((resolve, reject) => {
+      const args = Object.assign(params, {
+        success: (res: T) => {
+          resolve(res);
+        },
+        fail: (error: any) => {
+          reject(error);
+        }
+      });
+      func(args);
+    });
+  };
+};
+
+export {
+  promisic,
+};
