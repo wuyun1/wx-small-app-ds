@@ -1,4 +1,4 @@
-<view>
+<view class="container-home">
     <image class="top-theme" src="{{themeA.entrance_img}}" />
     <swiper 
         class="swiper"
