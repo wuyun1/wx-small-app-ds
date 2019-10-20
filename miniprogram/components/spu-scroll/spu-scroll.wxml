@@ -1,10 +1,12 @@
 <wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s" />
 
 <view class="container s-class">
-    <image class="title-image" src="{{theme.title_img}}" />
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <image class="title-image" src="{{theme.title_img}}" />
+    </view>
     <scroll-view scroll-x="{{true}}" enable-flex class="scroll-view">
         <block wx:key="spuList" wx:for="{{spuList}}">
-            <view class="spu-container">
+            <view hover-class="small-hover" hover-stay-time="300" class="spu-container">
                 <image class="spu-image" src="{{item.img}}" />
                 <text class="spu-text">{{item.title.length >=8 ? s.substring(item.title, 0, 7)+'...' : item.title}}</text>
                 <l-price 

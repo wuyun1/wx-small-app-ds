@@ -1,21 +1,29 @@
 <view class="container-home">
-    <image class="top-theme" src="{{themeA.entrance_img}}" />
-    <swiper 
-        class="swiper"
-        indicator-dots
-        indicator-active-color="#157658"
-        autoplay
-        circular
-    >
-        <block wx:for="{{bannerB.items}}" wx:key="bannerB" >
-            <swiper-item>
-                <image class="swiper-img" src="{{item.img}}" />
-            </swiper-item>
-        </block>
-    </swiper>
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <image class="top-theme" src="{{themeA.entrance_img}}" />
+    </view>
+
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <swiper 
+            class="swiper"
+            indicator-dots
+            indicator-active-color="#157658"
+            autoplay
+            circular
+        >
+            <block wx:for="{{bannerB.items}}" wx:key="bannerB" >
+                <swiper-item>
+                    <image class="swiper-img" src="{{item.img}}" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
     <s-category-grid grid="{{gridC}}"></s-category-grid>
 
-    <image class="activity" src="{{activityD.entrance_img}}" />
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <image class="activity" src="{{activityD.entrance_img}}" />
+    </view>
 
     <s-spu-scroll
         s-class="spu-scroll"
@@ -24,9 +32,13 @@
         wx:if="{{themeE.online}}"
     />
 
-    <image src="{{themeF.entrance_img}}" class="quality" />
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <image src="{{themeF.entrance_img}}" class="quality" />
+    </view>
 
     <s-hot-list banner="{{bannerG}}" />
 
-    <image src="{{themeH.entrance_img}}" class="fashion" />
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <image src="{{themeH.entrance_img}}" class="fashion" />
+    </view>
 </view>

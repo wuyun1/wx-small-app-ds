@@ -1,11 +1,18 @@
-
 <view class="container">
-    <image class="title-image" src="{{banner.img}}" />
+    <view hover-class="rect-hover" hover-stay-time="300">
+        <image class="title-image" src="{{banner.img}}" />
+    </view>
     <view class="list-container">
-        <image class="left" src="{{left.img}}" />
-        <view class="right-container">
-            <image class="right-size" src="{{rightTop.img}}" />
-            <image class="right-size" src="{{rightBottom.img}}" />
+        <view hover-class="rect-hover" hover-stay-time="300">
+            <image class="left" src="{{left.img}}" />
+        </view>
+        <view class="right-container" hover-stay-time="300">
+            <view hover-class="rect-hover" >
+                <image class="right-size" src="{{rightTop.img}}" />
+            </view>
+            <view hover-class="rect-hover" hover-stay-time="300">
+                <image class="right-size" src="{{rightBottom.img}}" />
+            </view>
         </view>
     </view>
 </view>

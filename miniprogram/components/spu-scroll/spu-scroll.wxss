@@ -1,3 +1,4 @@
+@import "../../wxss/util.wxss";
 
 .container {
     padding: 42rpx 0 34rpx 28rpx;
@@ -19,6 +20,7 @@
 }
 
 .spu-container {
+    transition: all 200ms ease-in-out;
     margin-right: 60rpx;
     display: flex;
     flex-direction: column;
