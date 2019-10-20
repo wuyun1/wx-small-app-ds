@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40rpx;
+    background-color: #fff;
+}
+
+.title-image {
+    width: 690rpx;
+    height: 90rpx;
+}
+
+.list-container {
+    margin-top: 32rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left {
+    width: 346rpx;
+    height: 522rpx;
+    display: flex;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-size {
+    width: 400rpx;
+    height: 260rpx;
+    display: flex;
+}
+
+.fashion {
+    display: flex;
+    width: 100%;
+    height: 840rpx;
+    margin-top: 20rpx;
+}

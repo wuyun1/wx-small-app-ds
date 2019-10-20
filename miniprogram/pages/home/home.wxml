@@ -14,5 +14,19 @@
         </block>
     </swiper>
     <s-category-grid grid="{{gridC}}"></s-category-grid>
+
     <image class="activity" src="{{activityD.entrance_img}}" />
+
+    <s-spu-scroll
+        s-class="spu-scroll"
+        theme="{{themeE}}"
+        spu-list="{{themeESpuList}}"
+        wx:if="{{themeE.online}}"
+    />
+
+    <image src="{{themeF.entrance_img}}" class="quality" />
+
+    <s-hot-list banner="{{bannerG}}" />
+
+    <image src="{{themeH.entrance_img}}" class="fashion" />
 </view>

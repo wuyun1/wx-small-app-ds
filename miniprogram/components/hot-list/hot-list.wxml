@@ -1,0 +1,11 @@
+
+<view class="container">
+    <image class="title-image" src="{{banner.img}}" />
+    <view class="list-container">
+        <image class="left" src="{{left.img}}" />
+        <view class="right-container">
+            <image class="right-size" src="{{rightTop.img}}" />
+            <image class="right-size" src="{{rightBottom.img}}" />
+        </view>
+    </view>
+</view>
