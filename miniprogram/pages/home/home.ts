@@ -19,12 +19,33 @@ Page({
     await this.initAllData();
   },
 
+  async initBottomSpuList() {
+
+  },
+
   async initAllData() {
     const theme = new Theme();
-    await theme.getThemes();
-    const bannerB = await Banner.getHomeLocationB();
-    const gridC = await Category.getHomeLocationC();
-    const activityD = await Activity.getHomeLocationD();
+
+    // await theme.getThemes();
+    // const bannerB = await Banner.getHomeLocationB();
+    // const gridC = await Category.getHomeLocationC();
+    // const activityD = await Activity.getHomeLocationD();
+    // const bannerG = await Banner.getHomeLocationG();
+
+    const [
+      // allTheme,
+      ,
+      bannerB,
+      gridC,
+      activityD,
+      bannerG,
+    ] = await Promise.all([
+      theme.getThemes(),
+      Banner.getHomeLocationB(),
+      Category.getHomeLocationC(),
+      Activity.getHomeLocationD(),
+      Banner.getHomeLocationG()
+    ])
 
     const themeA = await theme.getHomeLocationA();
     const themeE = await theme.getHomeLocationE();
@@ -37,8 +58,6 @@ Page({
     }
     const themeF = await theme.getHomeLocationF();
     const themeH = await theme.getHomeLocationH();
-    const bannerG = await Banner.getHomeLocationG();
-
 
     this.setData!({
       themeA,
