@@ -12,3 +12,9 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+
+# typescript
+miniprogram/**/*.js
+miniprogram/**/*.jsx
+miniprogram/**/*.d.ts
+!miniprogram/miniprogram_npm/**/*.js
