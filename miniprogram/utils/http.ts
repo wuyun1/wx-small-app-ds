@@ -2,7 +2,7 @@ import { config } from "../config/config";
 import { promisic } from "./util";
 
 class Http {
-    static async request(option: wx.RequestOption) {
+    static async request(option: wx.RequestOption):Promise<any> {
         const response = await promisic(wx.request)({
             method: 'GET',
             ...option,

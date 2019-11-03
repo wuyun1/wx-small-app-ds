@@ -2,8 +2,29 @@ import { Theme } from '../../model/theme';
 import { Banner } from '../../model/banner';
 import { Category } from '../../model/category';
 import { Activity } from '../../model/activity';
+import { SpuPaging } from '../../model/spu-paging';
+import { Paging } from '../../utils/paging';
 
-Page({
+interface HomePageData {
+  themeA: any,
+  themeE: any,
+  themeF: any,
+  themeH: any,
+  bannerB: any,
+  bannerG: any,
+  gridC: any[],
+  activityD: any,
+  spuPaging?: Paging,
+  moreData: boolean,
+  // ac: string;
+}
+
+interface HomePageMethod {
+  initBottomSpuList: any;
+  initAllData: any;
+}
+
+Page<HomePageData, HomePageMethod>({
   data: {
     themeA: null,
     themeE: null,
@@ -13,27 +34,46 @@ Page({
     bannerG: null,
     gridC: [],
     activityD: null,
+    spuPaging: undefined,
+    moreData: true,
   },
   
   async onLoad() {
-    await this.initAllData();
+    await Promise.all([
+      this.initAllData(), this.initBottomSpuList()
+    ]);
   },
 
   async initBottomSpuList() {
+    const spuPaging = SpuPaging.getLatestPaging();
+    this!.data!.spuPaging = spuPaging;
+    const data = await spuPaging.getMoreData();
+    this.setData!({
+      moreData: spuPaging.moreData
+    });
+    if(!data) {
+      return;
+    }
+    wx.lin.renderWaterFlow(data.items);
+  },
 
+  async onReachBottom () {
+    if(!this.data || !this.data.spuPaging) {
+      return;
+    }
+    const data = await this.data.spuPaging.getMoreData();
+    this.setData!({
+      moreData: this.data.spuPaging.moreData
+    });
+    if(!data) {
+      return;
+    }
+    wx.lin.renderWaterFlow(data.items);
   },
 
   async initAllData() {
     const theme = new Theme();
-
-    // await theme.getThemes();
-    // const bannerB = await Banner.getHomeLocationB();
-    // const gridC = await Category.getHomeLocationC();
-    // const activityD = await Activity.getHomeLocationD();
-    // const bannerG = await Banner.getHomeLocationG();
-
     const [
-      // allTheme,
       ,
       bannerB,
       gridC,
