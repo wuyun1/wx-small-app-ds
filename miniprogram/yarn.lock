@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-lin-ui@^0.6.7:
-  version "0.6.7"
-  resolved "https://registry.npmjs.org/lin-ui/-/lin-ui-0.6.7.tgz#30d6b376b5e330f6cba094d80bbd354874bc05e9"
-  integrity sha512-wUKoABdt2bJT/3eeUaRJvjnFwCx6n5Qt4V7FQCAd7fetpYLjIRGPc43DGtzuZ1eHqMYG9ITr5PCFW98xaoqaCg==
+lin-ui@^0.6.8:
+  version "0.6.8"
+  resolved "http://nexus.saas.hand-china.com/content/groups/srm-npm-group/lin-ui/-/lin-ui-0.6.8.tgz#891a67f74a0617bd262c2a40d0c61c4d22b4c81f"
+  integrity sha512-oR8HSlUeB2HP4+3qh7QaTEhSb04DNA6ZytaCHsOkHorMgAwZD0mmudIEg+ak/TJM56gcPRSJHVDIvqj0LrjwgQ==
