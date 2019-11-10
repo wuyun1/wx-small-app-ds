@@ -30,6 +30,30 @@ const promisic = function<T> (func: Function) {
   };
 };
 
+
+const combination = function (arr: string[], size: number) {
+  var r: string[][] = []; 
+
+  function _(t: string[], a: string[], n: number) { 
+      if (n === 0) {
+          r[r.length] = t;
+          return;
+      }
+      for (var i = 0, l = a.length - n; i <= l; i++) {
+          var b = t.slice();
+          b.push(a[i]);
+          _(b, a.slice(i + 1), n - 1);
+      }
+  }
+
+  _([], arr, size);
+
+  return r;
+}
+
+
+
 export {
+  combination,
   promisic,
 };

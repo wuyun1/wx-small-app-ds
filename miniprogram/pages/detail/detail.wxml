@@ -1,2 +1,6 @@
 <!--miniprogram/pages/detail/detail.wxml-->
-<text>miniprogram/pages/detail/detail.wxml</text>
+
+<view class="container">
+    <!-- <text>{{spu.id}}</text> -->
+    <s-realm spu="{{spu}}" />
+</view>
