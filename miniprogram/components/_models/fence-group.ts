@@ -25,11 +25,19 @@ class FenceGroup {
     }
 
     eachCell(cb: Function) {
-        this.fences.forEach((fence, y) => {
-            fence.cells.forEach((cell, x) => {
-                cb({fence, cell, x, y});
+        this.fences.forEach((fence, fenceIndex) => {
+            fence.cells.forEach((cell, cellIndex) => {
+                cb({cell, fenceIndex, cellIndex});
             })
         });
+    }
+
+    getDefaultSku() {
+        const defaultSkuId = this.spu.default_sku_id;
+        if(!defaultSkuId){
+            return;
+        }
+        return this.skuList.find(s => s.id === defaultSkuId);
     }
 
     static _createMatrix(skuList: any[]) {

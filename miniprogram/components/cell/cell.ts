@@ -10,11 +10,11 @@ Component({
       type: Object,
       value: null,
     },
-    x: {
+    fenceIndex: {
       type: Number,
       value: null,
     },
-    y: {
+    cellIndex: {
       type: Number,
       value: null,
     },
@@ -43,8 +43,8 @@ Component({
     onTap: function (this: WxComponent) {
       this.triggerEvent('celltop', {
         cell: this.properties.cell,
-        x: this.properties.x,
-        y: this.properties.y,
+        fenceIndex: this.properties.fenceIndex,
+        cellIndex: this.properties.cellIndex,
       }, {
         bubbles: true,
         composed: true,

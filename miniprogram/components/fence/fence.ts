@@ -10,7 +10,7 @@ Component({
       type: Object,
       value: null,
     },
-    y: {
+    fenceIndex: {
       type: Number,
       value: null,
     }
